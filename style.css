@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --Overpass: 'Overpass', sans-serif;
+    --Elements: #343b46;
+}
+
+html {
+    font-family: var(--Overpass);
+}
+
+body {
+    background-color: var(--VeryDarkBlue);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9375rem;
+}
+
+.give-rating {
+    /* gradient background */
+    background: radial-gradient(circle at top, #232a34, #191d24);
+    overflow: hidden;
+    /* Mobile first */
+    width: 100%;
+    max-width: 18rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    padding: 20px 20px;
+}
+
+
+.star-icon {
+    width: 15px;
+    border: solid;
+    border-radius: 100%;
+    padding: 10px;
+    border-color: var(--Elements);
+    background-color: var(--Elements);
+}
+
+.title {
+    color: var(--White);
+    font-size: 24px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.description {
+    color: var(--White);
+    opacity: 0.4;
+    margin: 0;
+    padding: 10px 0 20px 0;
+    font-size: 14px;
+}
+
+.rating-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+
+.star {
+    border: none;
+    background-color: var(--Elements);
+    width: 2.5rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    color: var(--White);
+    opacity: 0.4;
+    font-weight: 700;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.star:hover {
+    background-color: var(--Orange);
+    transition: background-color 0.3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-button button {
+    padding: 15px 110px;
+    border: none;
+    background-color: var(--Orange);
+    border-radius: 50px;
+    color: var(--White);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button button:hover {
+    color: var(--Orange);
+    background-color: var(--White);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+@media (min-width: 28rem) {
+    .give-rating {
+        max-width: 25rem;
+    }
+}
