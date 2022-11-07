@@ -91,6 +91,11 @@ body {
     cursor: pointer;
 }
 
+.star:focus {
+    background-color: var(--LightGrey);
+    opacity: 1;
+}
+
 .submit-button {
     display: flex;
     align-items: center;
@@ -108,7 +113,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -119,9 +124,55 @@ body {
     cursor: pointer;
 }
 
+/* .give-rating {
+    display: none;
+} */
 
-@media (min-width: 28rem) {
-    .give-rating {
-        max-width: 25rem;
-    }
+.thank-you {
+     /* gradient background */
+     background: radial-gradient(circle at top, #232a34, #191d24);
+     overflow: hidden;
+     /* Mobile first */
+     width: 100%;
+     max-width: 18rem;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+     border-radius: 1rem;
+     padding: 20px 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     z-index: -1;
+}
+
+.thank-you img {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.selection{
+    border-radius: 30px;
+    background-color: var(--Elements);
+    color: var(--Orange);
+    padding: 7px 20px 5px 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.thank-you h1, #thanks-description {
+    color: var(--White);
+}
+
+.thank-you h1 {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+#thanks-description {
+    text-align: center;
+    opacity: 0.7;
 }
