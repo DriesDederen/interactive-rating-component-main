@@ -15,6 +15,6 @@ rating.forEach(rate => {
 })
 
 buttonSubmit.addEventListener('click', () => {
-    thankYou.style.zIndex = 2;
-    giveRating.style.display = none;
+    thankYou.style.zIndex = 100;
+    // giveRating.style.display = none;
 })
